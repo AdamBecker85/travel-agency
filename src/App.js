@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import MainLayout from './components/layout/MainLayout/MainLayout';
@@ -13,6 +13,15 @@ import NotFound from './components/views/NotFound/NotFound';
 
 import parseTrips from './utils/parseTrips';
 import {setMultipleStates} from './redux/globalRedux';
+
+import Regions from './components/views/Regions/Regions';
+import Countries from './components/views/Countries/Countries';
+import Country from './components/views/Country/Country';
+
+import {AnimatedSwitch} from 'react-router-transition';
+import styles from './App.module.scss';
+
+import Trip from './components/views/Trip/TripContainer';
 
 class App extends React.Component {
   static propTypes = {
@@ -37,13 +46,22 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <MainLayout>
-          <Switch>
+          <AnimatedSwitch
+            atEnter={{ opacity: 0, top:200 }}
+            atLeave={{ opacity: 0, top:200 }}
+            atActive={{ opacity: 1, top:0 }}
+            className={styles.switchWrapper}
+          >
             <Route exact path='/' component={Home} />
             <Route exact path='/trips' component={Trips} />
             {/* TODO - add more routes for other views */}
+            <Route exact path='/countries' component={Countries} />
+            <Route exact path='/regions' component={Regions} />
+            <Route exact path='/trip/:id' component={Trip} />
+            <Route exact path='/country/:id' component={Country} />
             <Route exact path='/info' component={Info} />
             <Route path='*' component={NotFound} />
-          </Switch>
+          </AnimatedSwitch>
         </MainLayout>
       </BrowserRouter>
     );
