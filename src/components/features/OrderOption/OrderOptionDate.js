@@ -1,8 +1,10 @@
 import React from 'react';
 import DatePicker from 'react-datepicker';
 import PropTypes from 'prop-types';
-import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+//import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import styles from './OrderOption.module.scss';
+import 'react-datepicker/dist/react-datepicker.css';
+
 
 const OrderOptionDate = ({setOptionValue, currentValue}) => (
   <div className={styles.component}>
