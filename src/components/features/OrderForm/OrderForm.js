@@ -7,7 +7,7 @@ import pricing from '../../../data/pricing.json';
 import OrderOption from '../OrderOption/OrderOption';
 import setOrderOption from '../../../redux/orderRedux';
 
-const OrderForm = ({tripCost, options}) => (
+const OrderForm = ({tripCost, options, setOrderOption}) => (
     <Row>
       {pricing.map(pricingOption => (
       <Col md={4}>
