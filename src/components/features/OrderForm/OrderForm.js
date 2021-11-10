@@ -5,29 +5,28 @@ import {Row, Col} from 'react-flexbox-grid';
 import OrderSummary from '../../features/OrderSummary/OrderSummary';
 import pricing from '../../../data/pricing.json';
 import OrderOption from '../OrderOption/OrderOption';
-import setOrderOption from '../../../redux/orderRedux';
 
 const OrderForm = ({tripCost, options, setOrderOption}) => (
-    <Row>
-      {pricing.map(pricingOption => (
-      <Col md={4}>
+  <Row>
+    {pricing.map(pricingOption => (
+      <Col md={4} key={pricingOption.id}>
         <OrderOption 
-        key={pricingOption.id} 
-        currentValue={options[pricingOption.id]} 
-        setOrderOption={setOrderOption} 
-        {...pricingOption} />
+          key={pricingOption.id} 
+          currentValue={options[pricingOption.id]} 
+          setOrderOption={setOrderOption} 
+          {...pricingOption} />
       </Col>
-      ))}
-      <Col xs={12}>
-        <OrderSummary tripCost={tripCost} options={options}/>
-      </Col>
-    </Row>
+    ))}
+    <Col xs={12}>
+      <OrderSummary tripCost={tripCost} options={options}/>
+    </Col>
+  </Row>
 );
 
 OrderForm.propTypes = {
-    tripCost: PropTypes.string,
-    options: PropTypes.object,
-    setOrderOption: PropTypes.func,
+  tripCost: PropTypes.string,
+  options: PropTypes.object,
+  setOrderOption: PropTypes.func,
 };
 
 

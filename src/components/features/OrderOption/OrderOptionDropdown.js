@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React from "react";
+import React from 'react';
 
-import { formatPrice } from "../../../utils/formatPrice";
+import { formatPrice } from '../../../utils/formatPrice';
 import styles from './OrderOption.module.scss';
 
 const OrderOptionDropdown = ({values, required, currentValue, setOptionValue}) => (
@@ -22,6 +22,9 @@ const OrderOptionDropdown = ({values, required, currentValue, setOptionValue}) =
 OrderOptionDropdown.propTypes = {
   name: PropTypes.string,
   setOptionValue: PropTypes.func,
+  values: PropTypes.array,
+  required: PropTypes.bool,
+  currentValue: PropTypes.string,
 };
 
 export default OrderOptionDropdown;

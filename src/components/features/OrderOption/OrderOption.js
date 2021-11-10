@@ -17,7 +17,7 @@ const optionTypes = {
   checkboxes: OrderOptionCheckboxes,
   number: OrderOptionNumber,
   text: OrderOptionText,
-  date: OrderOptionDate
+  date: OrderOptionDate,
 };
 
 const OrderOption = ({name, type, id, setOrderOption, ...otherProps}) => {
@@ -40,6 +40,9 @@ const OrderOption = ({name, type, id, setOrderOption, ...otherProps}) => {
 
 OrderOption.propTypes = {
   name: PropTypes.string,
+  type: PropTypes.node,
+  id: PropTypes.string,
+  setOrderOption: PropTypes.func,
   //setOrderOption: PropTypes.func,
 };
 
