@@ -119,7 +119,7 @@ for(let type in optionTypes){
         
         it('should run setOrderOption function on click', () => {
           renderedSubcomponent.find('.icon').at(2).simulate('click');
-          //expect(mockSetOrderOption).toBeCalledTimes(1);
+          expect(mockSetOrderOption).toBeCalledTimes(1);
           expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: mockProps.values[1].id });
         });
         break;
