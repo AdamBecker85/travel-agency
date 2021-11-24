@@ -11,7 +11,7 @@ import {calculateTotal} from '../../../utils/calculateTotal';
 import {formatPrice} from '../../../utils/formatPrice';
 import settings from '../../../data/settings';
 
-const sendOrder = (options, tripCost, tripName, countryCode) => {
+const sendOrder = (options, tripCost, tripId, tripName, countryCode) => {
   const totalCost = formatPrice(calculateTotal(tripCost, options));
 
   const{contact, name} = options;
@@ -30,6 +30,7 @@ const sendOrder = (options, tripCost, tripName, countryCode) => {
     totalCost,
     tripName,
     countryCode,
+    tripId,
   };
 
   const url = settings.db.url + '/' + settings.db.endpoint.orders;

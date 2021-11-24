@@ -90,6 +90,20 @@
       "totalCost": "$71,533",
       "tripName": "Enjoyable foray in fine United Arab Emirates",
       "id": 7
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": "4",
+      "children": 0,
+      "name": "Mark",
+      "contact": "123456",
+      "start-date": "2021-12-03T23:00:00.000Z",
+      "totalCost": "$160,609",
+      "tripName": "Tremendous foray in remarkable Thailand",
+      "tripId": "5cc1d1013d4adc0ff0d2dab8",
+      "id": 8
     }
   ]
 }
