@@ -104,6 +104,23 @@
       "tripName": "Tremendous foray in remarkable Thailand",
       "tripId": "5cc1d1013d4adc0ff0d2dab8",
       "id": 8
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "security"
+      ],
+      "adults": "3",
+      "children": "1",
+      "name": "Joe",
+      "contact": "545455",
+      "start-date": "",
+      "totalCost": "$91,151",
+      "tripName": "Sensational expedition in fine Zambia",
+      "countryCode": "ZMB",
+      "tripId": "5cc1d101bdf33c2d65ee7184",
+      "id": 9
     }
   ]
 }

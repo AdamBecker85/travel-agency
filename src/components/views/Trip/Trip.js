@@ -72,7 +72,7 @@ const Trip = ({error, name, image, cost, days, description, country, intro, id})
         <Row>
           <Col xs={12}>
             <PageTitle text='Trip options' />
-            <OrderForm tripCost={cost} countryCode={country.code} tripName={name} tripId={id}/>
+            <OrderForm tripCost={cost} countryCode={country.alpha3Code} tripName={name} tripId={id}/>
           </Col>
         </Row>
       </Grid>
