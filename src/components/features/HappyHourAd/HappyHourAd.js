@@ -1,5 +1,5 @@
 import React from 'react';
-//import styles from './HappyHour.scss';
+import styles from './HappyHourAd.scss';
 import PropTypes from 'prop-types';
 
 class HappyHourAd extends React.Component {
@@ -33,9 +33,9 @@ class HappyHourAd extends React.Component {
     }
     
     return(
-      <div>
-        <h3 className="title">{title}</h3>
-        <div className="promoDescription">{promoDescription}</div>
+      <div className={styles.component}>
+        <h3 className={styles.title}>{title}</h3>
+        <div className={styles.promoDescription}>{promoDescription}</div>
       </div>
     );
   }
