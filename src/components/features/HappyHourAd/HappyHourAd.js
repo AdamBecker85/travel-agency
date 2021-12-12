@@ -31,7 +31,7 @@ class HappyHourAd extends React.Component {
     let { title, promoDescription } = this.props;
 
     if (this.getCountdownTime() <= 23 * 60 * 60) {
-      promoDescription = formatTime(this.getCountdownTime() + '');
+      promoDescription = formatTime(this.getCountdownTime());
     }
     
     return(
